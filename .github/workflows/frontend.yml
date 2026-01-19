@@ -5,7 +5,8 @@
 # 3. Secrets: AZURE_CLIENT_ID, AZURE_TENANT_ID, AZURE_SUBSCRIPTION_ID
 # 4. Variables: STORAGE_ACCOUNT_NAME
 
-name: PRO_TEMPLATE_FRONTEND_DEPLOY
+#name: PRO_TEMPLATE_FRONTEND_DEPLOY
+name: OIDC_Frontend_Deploy
 
 on:
   push:
@@ -35,7 +36,7 @@ jobs:
         with:
           inlineScript: |
             az storage blob upload-batch \
-              --account-name crcmainxrg1765444963\
+              --account-name crcmainxrg1765444963 \
               --auth-mode login \
               -d '$web' \
               -s . \
