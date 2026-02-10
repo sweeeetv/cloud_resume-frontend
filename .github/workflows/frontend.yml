@@ -36,7 +36,7 @@ jobs:
         with:
           inlineScript: |
             az storage blob upload-batch \
-              --account-name crcmainxrg1765444963 \
+              --account-name storageacc444resume \
               --auth-mode login \
               -d '$web' \
               -s . \
